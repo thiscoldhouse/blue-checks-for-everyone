@@ -1,0 +1,28 @@
+{
+  "description": "Blue checks for everyone",
+  "manifest_version": 2,
+  "name": "blue-checks-for-everyone",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://twitter.com/*",
+        "*://mobile.twitter.com/*",
+        "*://twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion/*"
+      ],
+      "js": ["main.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Blue checks for everyone!",
+    "default_icon": {
+      "48": "logo48.png"
+    }
+  }
+}
